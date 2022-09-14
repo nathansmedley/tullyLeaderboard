@@ -52,19 +52,18 @@ $(function() {
         var lsvalue = localStorage.getItem(key);
         // console.log the iteration key and value
         var lsdata = JSON.parse(lsvalue);
-
-        $('.leaderboard').append('<li class="leaderboard__result" data-score=' + lsdata.score + '><div class="leaderboard__result__wrapper"><div class="leaderboard__result__name">' + lsdata.name + '</div> <div class="leaderboard__result__company">' + lsdata.company + '</div> <div class="leaderboard__result__score">' + lsdata.score + '</div></div></li>');
-        $(".leaderboard.autosort").each(function(){
-            $(this).html($(this).children('li').sort(function(a, b){
+        //numbering system
+        
+        $('.leaderboard').append('<li class="leaderboard__result" data-score=' + lsdata.score + '><div class="leaderboard__result__wrapper"><div class="leaderboard__result__pos"></div><div class="leaderboard__result__name">' + lsdata.name + '</div> <div class="leaderboard__result__company">' + lsdata.company + '</div> <div class="leaderboard__result__score">' + lsdata.score + '</div></div></li>');
+    
+        //sort leaderboard
+        $(function() {
+            $(".leaderboard li").sort(sort_li).appendTo('.leaderboard');
+            function sort_li(a, b) {
                 return ($(b).data('score')) > ($(a).data('score')) ? 1 : -1;
-            }));
+            }
         });
+    
     }
-
-    $(".leaderboard.autosort").each(function(){
-        $(this).html($(this).children('li').sort(function(a, b){
-            return ($(b).data('score')) > ($(a).data('score')) ? 1 : -1;
-        }));
-    });
 
 });
