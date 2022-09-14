@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url('/img/couds.png') no-repeat, #86bbff;
+    background: url('img/couds.png') no-repeat, #86bbff;
     background-size: contain;
     background-position: top -20px left -200px;
     margin:0;
@@ -137,7 +137,7 @@ body {
                 height:55px;
                 position: absolute;
                 display: block;
-                background:url('/img/coin.png') no-repeat;
+                background:url('img/coin.png') no-repeat;
                 background-size: contain;
                 left:0;
                 top:50%;
@@ -233,7 +233,7 @@ body {
 }
 
 footer {
-    background:url('/img/footer.png') no-repeat;
+    background:url('img/footer.png') no-repeat;
     background-size: cover;
     height:150px;
     width:100%;
