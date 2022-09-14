@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="newScore">
+        <img src="/img/newscore.png" />
+    </div>
+
+    <div class="scoreAdd">
+        <div class="scoreAdd__modal">
+            <form class="scoreAdd__modal__form">
+                <div class="scoreAdd__modal__form__title">New Score</div>
+                <input type="text" placeholder="Name" class="scoreAdd__modal__form__name" />
+                <input type="text" placeholder="Company" class="scoreAdd__modal__form__company" />
+                <input type="text" placeholder="email" class="scoreAdd__modal__form__email"/>
+                <input type="text" placeholder="score" class="scoreAdd__modal__form__score" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+                <img src="/img/enter.png" class="scoreAdd__modal__form__img" />
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="header">
+            <img src="/img/logo.png" />
+        </div>
+
+        <div class="leaderboardWrapper">
+            <ol class="leaderboard autosort">
+            </ol>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="jquery-3.6.1.min.js"></script> 
+    <script src="script.js"></script> 
+</body>
+</html>
